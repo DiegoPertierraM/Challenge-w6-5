@@ -1,5 +1,6 @@
 import createDebug from 'debug';
 import { createServer } from 'http';
+import 'dotenv/config';
 import { exit } from 'process';
 import { app } from './app.js';
 
@@ -14,6 +15,6 @@ server.on('error', (error) => {
   exit(1);
 });
 
-server.on('listener', () => {
+server.on('listening', () => {
   debug(`server running on http://localhost:${port}`);
 });

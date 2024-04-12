@@ -9,8 +9,8 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=prod node dist/index.js",
-    "start:dev": "cross-env NODE_ENV=dev cross-env PORT=3400 node --env-file=.env --watch dist/index.js",
-    "start:mon": "cross-env NODE_ENV=dev cross-env PORT=3000 nodemon dist/index.js",
+    "start:dev": "cross-env DEBUG=W6E* cross-env NODE_ENV=dev cross-env PORT=3400 node --env-file=.env --watch dist/index.js",
+    "start:mon": "cross-env DEBUG=W6E* cross-env NODE_ENV=dev cross-env PORT=3000 nodemon dist/index.js",
     "build": "tsc",
     "dev": "tsc -w",
     "test": "jest",
