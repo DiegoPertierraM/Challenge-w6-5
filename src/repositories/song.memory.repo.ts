@@ -1,23 +1,46 @@
+import fs from 'fs';
+import path from 'path';
 import {
   type SongCreateDto,
   type Song,
   type SongUpdateDto,
 } from '../entities/song';
 import createDebug from 'debug';
+import { fileURLToPath } from 'url';
 
 const debug = createDebug('W6E:repository:song');
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // eslint-disable-next-line @typescript-eslint/naming-convention
-const SONGS: Song[] = [
-  { id: '1', title: 'Mardy Bum', author: 'Arctic Monkeys', year: 1900 },
-  { id: '2', title: 'Laika', author: 'Arcade Fire', year: 1900 },
-  { id: '3', title: 'We Will Rock You', author: 'Queen', year: 1900 },
-];
+const JSON_FILE_PATH = path.join(__dirname, 'songs.json');
 
 export class SongMemoryRepository {
-  songs = SONGS;
+  songs: Song[] = [];
+
   constructor() {
-    debug('Instanciated song memory repository');
+    debug('Instantiated song memory repository');
+    this.loadSongs();
+    console.log(this.readAll());
+  }
+
+  loadSongs() {
+    try {
+      const data = fs.readFileSync(JSON_FILE_PATH, 'utf8');
+      this.songs = JSON.parse(data) as Song[];
+    } catch (err) {
+      console.error('Error loading songs:', err);
+      this.songs = [];
+    }
+  }
+
+  saveSongs() {
+    fs.writeFileSync(
+      JSON_FILE_PATH,
+      JSON.stringify(this.songs, null, 2),
+      'utf8'
+    );
   }
 
   readAll() {
@@ -35,24 +58,31 @@ export class SongMemoryRepository {
       author: data.author,
       year: data.year,
     };
-    this.songs = [...this.songs, newSong];
+    this.songs.push(newSong);
+    this.saveSongs();
     return newSong;
   }
 
   update(id: string, data: Partial<SongUpdateDto>) {
-    const song = this.songs.find((song) => song.id === id);
-    if (!song) {
+    const index = this.songs.findIndex((song) => song.id === id);
+    if (index === -1) {
       throw new Error(`Song ${id} not found`);
     }
 
-    const newSong = { ...song, ...data };
-    this.songs = this.songs.map((song) => (song.id === id ? newSong : song));
-    return newSong;
+    const updatedSong = { ...this.songs[index], ...data };
+    this.songs[index] = updatedSong;
+    this.saveSongs();
+    return updatedSong;
   }
 
   delete(id: string) {
-    const song = this.songs.find((song) => song.id === id);
-    this.songs = this.songs.filter((song) => song.id !== id);
-    return song;
+    const index = this.songs.findIndex((song) => song.id === id);
+    if (index === -1) {
+      throw new Error(`Song ${id} not found`);
+    }
+
+    const deletedSong = this.songs.splice(index, 1)[0];
+    this.saveSongs();
+    return deletedSong;
   }
 }
