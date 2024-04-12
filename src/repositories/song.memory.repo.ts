@@ -14,7 +14,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
-const JSON_FILE_PATH = path.join(__dirname, 'songs.json');
+const JSON_FILE_PATH = path.join(__dirname, 'songs.db.json');
 
 export class SongMemoryRepository {
   songs: Song[] = [];

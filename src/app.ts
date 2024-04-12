@@ -14,4 +14,4 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(express.static('public'));
 
-app.use('/song', songRouter);
+app.use('/songs', songRouter);
