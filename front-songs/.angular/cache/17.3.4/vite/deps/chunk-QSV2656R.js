@@ -13657,7 +13657,7 @@ function ɵɵvalidateIframeAttribute(attrValue, tagName, attrName) {
     iframe.src = "";
     iframe.srcdoc = trustedHTMLFromString("");
     nativeRemoveNode(lView[RENDERER], iframe);
-    const errorMessage = ngDevMode && `Angular has detected that the \`${attrName}\` was applied as a binding to an <iframe>${getTemplateLocationDetails(lView)}. For security reasons, the \`${attrName}\` can be set on an <iframe> as a static attribute only. 
+    const errorMessage = ngDevMode && `Angular has detected that the \`${attrName}\` was applied as a binding to an <iframe>${getTemplateLocationDetails(lView)}. For security reasons, the \`${attrName}\` can be set on an <iframe> as a static attribute only.
 To fix this, switch the \`${attrName}\` binding to a static attribute in a template or in host bindings section.`;
     throw new RuntimeError(-910, errorMessage);
   }
@@ -20045,16 +20045,16 @@ var NgModule = makeDecorator(
   void 0,
   void 0,
   /**
-   * Decorator that marks the following class as an NgModule, and supplies
-   * configuration metadata for it.
-   *
-   * * The `declarations` option configures the compiler
-   * with information about what belongs to the NgModule.
-   * * The `providers` options configures the NgModule's injector to provide
-   * dependencies the NgModule members.
-   * * The `imports` and `exports` options bring in members from other modules, and make
-   * this module's members available to others.
-   */
+  * Decorator that marks the following class as an NgModule, and supplies
+  * configuration metadata for it.
+  *
+  * * The `declarations` option configures the compiler
+  * with information about what belongs to the NgModule.
+  * * The `providers` options configures the NgModule's injector to provide
+  * dependencies the NgModule members.
+  * * The `imports` and `exports` options bring in members from other modules, and make
+  * this module's members available to others.
+  */
   (type, meta) => compileNgModule(type, meta)
 );
 var Version = class {
@@ -24526,43 +24526,43 @@ export {
 
 @angular/core/fesm2022/primitives/signals.mjs:
   (**
-   * @license Angular v17.3.4
-   * (c) 2010-2024 Google LLC. https://angular.io/
-   * License: MIT
-   *)
+  * @license Angular v17.3.4
+  * (c) 2010-2024 Google LLC. https://angular.io/
+  * License: MIT
+  *)
 
 @angular/core/fesm2022/core.mjs:
   (**
-   * @license Angular v17.3.4
-   * (c) 2010-2024 Google LLC. https://angular.io/
-   * License: MIT
-   *)
+  * @license Angular v17.3.4
+  * (c) 2010-2024 Google LLC. https://angular.io/
+  * License: MIT
+  *)
 
 @angular/core/fesm2022/core.mjs:
   (*!
-   * @license
-   * Copyright Google LLC All Rights Reserved.
-   *
-   * Use of this source code is governed by an MIT-style license that can be
-   * found in the LICENSE file at https://angular.io/license
-   *)
+  * @license
+  * Copyright Google LLC All Rights Reserved.
+  *
+  * Use of this source code is governed by an MIT-style license that can be
+  * found in the LICENSE file at https://angular.io/license
+  *)
 
 @angular/core/fesm2022/core.mjs:
   (*!
-   * @license
-   * Copyright Google LLC All Rights Reserved.
-   *
-   * Use of this source code is governed by an MIT-style license that can be
-   * found in the LICENSE file at https://angular.io/license
-   *)
+  * @license
+  * Copyright Google LLC All Rights Reserved.
+  *
+  * Use of this source code is governed by an MIT-style license that can be
+  * found in the LICENSE file at https://angular.io/license
+  *)
 
 @angular/core/fesm2022/core.mjs:
   (*!
-   * @license
-   * Copyright Google LLC All Rights Reserved.
-   *
-   * Use of this source code is governed by an MIT-style license that can be
-   * found in the LICENSE file at https://angular.io/license
-   *)
+  * @license
+  * Copyright Google LLC All Rights Reserved.
+  *
+  * Use of this source code is governed by an MIT-style license that can be
+  * found in the LICENSE file at https://angular.io/license
+  *)
 */
 //# sourceMappingURL=chunk-QSV2656R.js.map
