@@ -7,7 +7,7 @@ import { Song, SongCreateDto, SongUpdateDto } from './model/song';
   providedIn: 'root',
 })
 export class ApiRepoService {
-  private urlBase = 'http://localhost:3000/songs';
+  private urlBase = 'https://challenge-w6-5.onrender.com/songs';
 
   constructor(private http: HttpClient) {}
 
