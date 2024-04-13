@@ -1,0 +1,19 @@
+.song-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.song-card {
+  padding-block: 1rem;
+  padding-inline-start: 1rem;
+  background-color: rgb(243, 243, 184);
+  width: 175px;
+  border-radius: 1rem;
+
+  & li:first-child {
+    font-weight: 700;
+  }
+}

@@ -16,17 +16,13 @@
             "outputPath": "dist/songs",
             "index": "projects/songs/src/index.html",
             "browser": "projects/songs/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/songs/tsconfig.app.json",
             "assets": [
-              "projects/songs/src/favicon.ico",
+              "projects/songs/src/favicon.svg",
               "projects/songs/src/assets"
             ],
-            "styles": [
-              "projects/songs/src/styles.css"
-            ],
+            "styles": ["projects/songs/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -74,18 +70,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/songs/tsconfig.spec.json",
             "assets": [
               "projects/songs/src/favicon.ico",
               "projects/songs/src/assets"
             ],
-            "styles": [
-              "projects/songs/src/styles.css"
-            ],
+            "styles": ["projects/songs/src/styles.css"],
             "scripts": [],
             "karmaConfig": "projects/songs/karma.conf.js"
           }
@@ -103,8 +94,6 @@
     }
   },
   "cli": {
-    "schematicCollections": [
-      "@angular-eslint/schematics"
-    ]
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }
