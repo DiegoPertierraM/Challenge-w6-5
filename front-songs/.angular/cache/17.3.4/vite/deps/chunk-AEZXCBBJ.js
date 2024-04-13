@@ -1,4 +1,7 @@
 import {
+  withHttpTransferCache
+} from "./chunk-VJ356CDU.js";
+import {
   CommonModule,
   DOCUMENT,
   DomAdapter,
@@ -7,9 +10,8 @@ import {
   getDOM,
   isPlatformServer,
   parseCookieValue,
-  setRootDomAdapter,
-  withHttpTransferCache
-} from "./chunk-DDNALZGQ.js";
+  setRootDomAdapter
+} from "./chunk-QKNVKQJI.js";
 import {
   APP_ID,
   ApplicationModule,
@@ -1887,9 +1889,9 @@ export {
 
 @angular/platform-browser/fesm2022/platform-browser.mjs:
   (**
-  * @license Angular v17.3.4
-  * (c) 2010-2024 Google LLC. https://angular.io/
-  * License: MIT
-  *)
+   * @license Angular v17.3.4
+   * (c) 2010-2024 Google LLC. https://angular.io/
+   * License: MIT
+   *)
 */
-//# sourceMappingURL=chunk-IIFWC7DD.js.map
+//# sourceMappingURL=chunk-AEZXCBBJ.js.map

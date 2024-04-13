@@ -1,6 +1,7 @@
 import {
   Title
-} from "./chunk-IIFWC7DD.js";
+} from "./chunk-AEZXCBBJ.js";
+import "./chunk-VJ356CDU.js";
 import {
   DOCUMENT,
   HashLocationStrategy,
@@ -9,7 +10,7 @@ import {
   LocationStrategy,
   PathLocationStrategy,
   ViewportScroller
-} from "./chunk-DDNALZGQ.js";
+} from "./chunk-QKNVKQJI.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_INITIALIZER,
@@ -5583,9 +5584,9 @@ export {
 
 @angular/router/fesm2022/router.mjs:
   (**
-  * @license Angular v17.3.4
-  * (c) 2010-2024 Google LLC. https://angular.io/
-  * License: MIT
-  *)
+   * @license Angular v17.3.4
+   * (c) 2010-2024 Google LLC. https://angular.io/
+   * License: MIT
+   *)
 */
 //# sourceMappingURL=@angular_router.js.map
